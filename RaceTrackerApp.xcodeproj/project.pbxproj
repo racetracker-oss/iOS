@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98ACD8832BBFFA0C0013DAC3 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ACD8822BBFFA0C0013DAC3 /* CustomProgressView.swift */; };
+		98ACD8862BBFFD9C0013DAC3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 98ACD8852BBFFD9C0013DAC3 /* Lottie */; };
+		98ACD8882BBFFDA40013DAC3 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ACD8872BBFFDA40013DAC3 /* LottieView.swift */; };
+		98ACD88A2BBFFDBB0013DAC3 /* Animation - 1712309701482.json in Resources */ = {isa = PBXBuildFile; fileRef = 98ACD8892BBFFDBB0013DAC3 /* Animation - 1712309701482.json */; };
 		98E73BD62BBA979400379192 /* RaceTrackerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73BD52BBA979400379192 /* RaceTrackerAppApp.swift */; };
 		98E73BD82BBA979400379192 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73BD72BBA979400379192 /* ContentView.swift */; };
 		98E73BDA2BBA979500379192 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98E73BD92BBA979500379192 /* Assets.xcassets */; };
@@ -56,6 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		98ACD8822BBFFA0C0013DAC3 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
+		98ACD8872BBFFDA40013DAC3 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		98ACD8892BBFFDBB0013DAC3 /* Animation - 1712309701482.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Animation - 1712309701482.json"; path = "../../../Downloads/Animation - 1712309701482.json"; sourceTree = "<group>"; };
 		98E73BD22BBA979400379192 /* RaceTrackerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaceTrackerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E73BD52BBA979400379192 /* RaceTrackerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceTrackerAppApp.swift; sourceTree = "<group>"; };
 		98E73BD72BBA979400379192 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98E73C1F2BBB2CF000379192 /* CodeScanner in Frameworks */,
+				98ACD8862BBFFD9C0013DAC3 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +146,7 @@
 		98E73BD42BBA979400379192 /* RaceTrackerApp */ = {
 			isa = PBXGroup;
 			children = (
+				98ACD8892BBFFDBB0013DAC3 /* Animation - 1712309701482.json */,
 				98E73BD92BBA979500379192 /* Assets.xcassets */,
 				98E73C0F2BBB248D00379192 /* App */,
 				98E73C122BBB24A200379192 /* Model */,
@@ -253,6 +262,8 @@
 				98E73C262BBBEFBF00379192 /* GuideView.swift */,
 				98E73C242BBBE16400379192 /* CircleAnimations.swift */,
 				98E73C222BBB3A5300379192 /* CheckPointMapMarker.swift */,
+				98ACD8822BBFFA0C0013DAC3 /* CustomProgressView.swift */,
+				98ACD8872BBFFDA40013DAC3 /* LottieView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -394,6 +405,7 @@
 			name = RaceTrackerApp;
 			packageProductDependencies = (
 				98E73C1E2BBB2CF000379192 /* CodeScanner */,
+				98ACD8852BBFFD9C0013DAC3 /* Lottie */,
 			);
 			productName = RaceTrackerApp;
 			productReference = 98E73BD22BBA979400379192 /* RaceTrackerApp.app */;
@@ -469,6 +481,7 @@
 			mainGroup = 98E73BC92BBA979400379192;
 			packageReferences = (
 				98E73C1D2BBB2CEF00379192 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				98ACD8842BBFFD9C0013DAC3 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 98E73BD32BBA979400379192 /* Products */;
 			projectDirPath = "";
@@ -488,6 +501,7 @@
 			files = (
 				98E73BDD2BBA979500379192 /* Preview Assets.xcassets in Resources */,
 				98E73BDA2BBA979500379192 /* Assets.xcassets in Resources */,
+				98ACD88A2BBFFDBB0013DAC3 /* Animation - 1712309701482.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +528,7 @@
 			files = (
 				98E73C212BBB2D0200379192 /* CustomBarode.swift in Sources */,
 				98E73C002BBA97E800379192 /* HomeView.swift in Sources */,
+				98ACD8882BBFFDA40013DAC3 /* LottieView.swift in Sources */,
 				98E73C0E2BBAB96600379192 /* RegisterView.swift in Sources */,
 				98E73C302BBE971B00379192 /* AuthService.swift in Sources */,
 				98E73C452BBE9D4D00379192 /* ContentViewModel.swift in Sources */,
@@ -526,6 +541,7 @@
 				98E73C062BBA980F00379192 /* StatisticsView.swift in Sources */,
 				98E73C022BBA97F700379192 /* MapView.swift in Sources */,
 				98E73C0C2BBAB74400379192 /* LoginView.swift in Sources */,
+				98ACD8832BBFFA0C0013DAC3 /* CustomProgressView.swift in Sources */,
 				98E73C042BBA980300379192 /* ProfileView.swift in Sources */,
 				98E73C082BBA981A00379192 /* MainTabView.swift in Sources */,
 				98E73C2E2BBE824600379192 /* CurrentUser.swift in Sources */,
@@ -878,6 +894,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		98ACD8842BBFFD9C0013DAC3 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.2;
+			};
+		};
 		98E73C1D2BBB2CEF00379192 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/CodeScanner";
@@ -889,6 +913,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		98ACD8852BBFFD9C0013DAC3 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 98ACD8842BBFFD9C0013DAC3 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		98E73C1E2BBB2CF000379192 /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 98E73C1D2BBB2CEF00379192 /* XCRemoteSwiftPackageReference "CodeScanner" */;
