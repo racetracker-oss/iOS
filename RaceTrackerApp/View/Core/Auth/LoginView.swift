@@ -16,7 +16,7 @@ struct LoginView: View {
         NavigationStack{
             ZStack(alignment: .top){
                 Color.backGround.ignoresSafeArea()
-                RectangleLogoView()
+                CircleAnimations()
                     .padding(.top, 100)
                     
                 

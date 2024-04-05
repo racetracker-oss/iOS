@@ -25,7 +25,7 @@
 		98E73C1F2BBB2CF000379192 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 98E73C1E2BBB2CF000379192 /* CodeScanner */; };
 		98E73C212BBB2D0200379192 /* CustomBarode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C202BBB2D0200379192 /* CustomBarode.swift */; };
 		98E73C232BBB3A5300379192 /* CheckPointMapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C222BBB3A5300379192 /* CheckPointMapMarker.swift */; };
-		98E73C252BBBE16400379192 /* RectangleLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C242BBBE16400379192 /* RectangleLogoView.swift */; };
+		98E73C252BBBE16400379192 /* CircleAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C242BBBE16400379192 /* CircleAnimations.swift */; };
 		98E73C272BBBEFBF00379192 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C262BBBEFBF00379192 /* GuideView.swift */; };
 		98E73C2A2BBE811B00379192 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C292BBE811B00379192 /* ApiService.swift */; };
 		98E73C2C2BBE812100379192 /* ApiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C2B2BBE812100379192 /* ApiViewModel.swift */; };
@@ -34,7 +34,8 @@
 		98E73C322BBE972300379192 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C312BBE972300379192 /* LoginViewModel.swift */; };
 		98E73C452BBE9D4D00379192 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C442BBE9D4D00379192 /* ContentViewModel.swift */; };
 		98E73C472BBEB51500379192 /* CustomGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C462BBEB51500379192 /* CustomGradient.swift */; };
-		98E73C492BBEECF400379192 /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C482BBEECF400379192 /* PracticeView.swift */; };
+		98E73C492BBEECF400379192 /* CustomTabSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C482BBEECF400379192 /* CustomTabSelection.swift */; };
+		98E73C4C2BBFF5DD00379192 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C4B2BBFF5DD00379192 /* RegisterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +76,7 @@
 		98E73C0D2BBAB96600379192 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		98E73C202BBB2D0200379192 /* CustomBarode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarode.swift; sourceTree = "<group>"; };
 		98E73C222BBB3A5300379192 /* CheckPointMapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPointMapMarker.swift; sourceTree = "<group>"; };
-		98E73C242BBBE16400379192 /* RectangleLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleLogoView.swift; sourceTree = "<group>"; };
+		98E73C242BBBE16400379192 /* CircleAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAnimations.swift; sourceTree = "<group>"; };
 		98E73C262BBBEFBF00379192 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		98E73C292BBE811B00379192 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		98E73C2B2BBE812100379192 /* ApiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiViewModel.swift; sourceTree = "<group>"; };
@@ -84,7 +85,8 @@
 		98E73C312BBE972300379192 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		98E73C442BBE9D4D00379192 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		98E73C462BBEB51500379192 /* CustomGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGradient.swift; sourceTree = "<group>"; };
-		98E73C482BBEECF400379192 /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
+		98E73C482BBEECF400379192 /* CustomTabSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabSelection.swift; sourceTree = "<group>"; };
+		98E73C4B2BBFF5DD00379192 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,9 +145,6 @@
 				98E73C162BBB24D500379192 /* Utils */,
 				98E73C102BBB249900379192 /* View */,
 				98E73C112BBB249D00379192 /* ViewModel */,
-				98E73C242BBBE16400379192 /* RectangleLogoView.swift */,
-				98E73C262BBBEFBF00379192 /* GuideView.swift */,
-				98E73C482BBEECF400379192 /* PracticeView.swift */,
 			);
 			path = RaceTrackerApp;
 			sourceTree = "<group>";
@@ -187,15 +186,8 @@
 		98E73C102BBB249900379192 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				98E73C172BBB24F200379192 /* Home */,
-				98E73C182BBB24F800379192 /* Map */,
-				98E73C1A2BBB250200379192 /* Barcode */,
-				98E73C192BBB24FE00379192 /* Stat */,
-				98E73C1B2BBB250C00379192 /* Profile */,
-				98E73C072BBA981A00379192 /* MainTabView.swift */,
 				98E73C152BBB24CA00379192 /* General */,
 				98E73C142BBB24BA00379192 /* Core */,
-				98E73C132BBB24AB00379192 /* Auth */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,6 +195,7 @@
 		98E73C112BBB249D00379192 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				98E73C4A2BBFF51B00379192 /* Auth */,
 				98E73C282BBE810800379192 /* API */,
 			);
 			path = ViewModel;
@@ -228,6 +221,13 @@
 		98E73C142BBB24BA00379192 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				98E73C4D2BBFF61D00379192 /* Tab */,
+				98E73C172BBB24F200379192 /* Home */,
+				98E73C182BBB24F800379192 /* Map */,
+				98E73C1A2BBB250200379192 /* Barcode */,
+				98E73C192BBB24FE00379192 /* Stat */,
+				98E73C1B2BBB250C00379192 /* Profile */,
+				98E73C132BBB24AB00379192 /* Auth */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -235,7 +235,13 @@
 		98E73C152BBB24CA00379192 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				98E73C4E2BBFF68E00379192 /* Tab */,
+				98E73C4F2BBFF69300379192 /* Home */,
+				98E73C502BBFF69700379192 /* Map */,
 				98E73C1C2BBB277E00379192 /* Barcode */,
+				98E73C512BBFF69B00379192 /* Stat */,
+				98E73C522BBFF6A200379192 /* Profile */,
+				98E73C532BBFF6A900379192 /* Auth */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -243,6 +249,9 @@
 		98E73C162BBB24D500379192 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				98E73C482BBEECF400379192 /* CustomTabSelection.swift */,
+				98E73C262BBBEFBF00379192 /* GuideView.swift */,
+				98E73C242BBBE16400379192 /* CircleAnimations.swift */,
 				98E73C222BBB3A5300379192 /* CheckPointMapMarker.swift */,
 			);
 			path = Utils;
@@ -302,11 +311,69 @@
 			children = (
 				98E73C292BBE811B00379192 /* ApiService.swift */,
 				98E73C2B2BBE812100379192 /* ApiViewModel.swift */,
-				98E73C2F2BBE971B00379192 /* AuthService.swift */,
-				98E73C312BBE972300379192 /* LoginViewModel.swift */,
-				98E73C442BBE9D4D00379192 /* ContentViewModel.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		98E73C4A2BBFF51B00379192 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				98E73C442BBE9D4D00379192 /* ContentViewModel.swift */,
+				98E73C2F2BBE971B00379192 /* AuthService.swift */,
+				98E73C312BBE972300379192 /* LoginViewModel.swift */,
+				98E73C4B2BBFF5DD00379192 /* RegisterViewModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		98E73C4D2BBFF61D00379192 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				98E73C072BBA981A00379192 /* MainTabView.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		98E73C4E2BBFF68E00379192 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		98E73C4F2BBFF69300379192 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		98E73C502BBFF69700379192 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		98E73C512BBFF69B00379192 /* Stat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stat;
+			sourceTree = "<group>";
+		};
+		98E73C522BBFF6A200379192 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		98E73C532BBFF6A900379192 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,9 +517,9 @@
 				98E73C0E2BBAB96600379192 /* RegisterView.swift in Sources */,
 				98E73C302BBE971B00379192 /* AuthService.swift in Sources */,
 				98E73C452BBE9D4D00379192 /* ContentViewModel.swift in Sources */,
-				98E73C492BBEECF400379192 /* PracticeView.swift in Sources */,
+				98E73C492BBEECF400379192 /* CustomTabSelection.swift in Sources */,
 				98E73C2C2BBE812100379192 /* ApiViewModel.swift in Sources */,
-				98E73C252BBBE16400379192 /* RectangleLogoView.swift in Sources */,
+				98E73C252BBBE16400379192 /* CircleAnimations.swift in Sources */,
 				98E73C472BBEB51500379192 /* CustomGradient.swift in Sources */,
 				98E73C322BBE972300379192 /* LoginViewModel.swift in Sources */,
 				98E73C232BBB3A5300379192 /* CheckPointMapMarker.swift in Sources */,
@@ -467,6 +534,7 @@
 				98E73C272BBBEFBF00379192 /* GuideView.swift in Sources */,
 				98E73BD62BBA979400379192 /* RaceTrackerAppApp.swift in Sources */,
 				98E73C0A2BBA9F3700379192 /* BarcodeView.swift in Sources */,
+				98E73C4C2BBFF5DD00379192 /* RegisterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

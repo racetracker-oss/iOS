@@ -19,11 +19,10 @@ enum tabItems: Int, Identifiable, CaseIterable {
             return "Profile"
         }
     }
-    
     var id: Int { return self.rawValue }
 }
 
-struct PracticeView: View {
+struct CustomTabSelection: View {
     @State private var selectedIndex = 0
     var body: some View {
         ZStack{
@@ -40,24 +39,19 @@ struct PracticeView: View {
                                 .padding()
                                 .foregroundStyle(selectedIndex == section.rawValue ? .green : .gray)
                         })
-                        
                     }
-                    
-                    
                 }
                 Rectangle()
                     .frame(width: UIScreen.main.bounds.width  / CGFloat(tabItems.allCases.count ), height: 4)
                     .offset(x: CGFloat(selectedIndex) * UIScreen.main.bounds.width / CGFloat(tabItems.allCases.count))
                     .padding(.trailing, 160)
-                
             }
             .frame(maxWidth: .infinity)
-            
         }
     }
 }
 
 #Preview {
-    PracticeView()
+    CustomTabSelection()
 }
 

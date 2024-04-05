@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RectangleLogoView: View {
+struct CircleAnimations: View {
     @State private var circleAnimation = false
     
     var body: some View {
@@ -36,5 +36,5 @@ struct RectangleLogoView: View {
 }
 
 #Preview {
-    RectangleLogoView()
+    CircleAnimations()
 }
