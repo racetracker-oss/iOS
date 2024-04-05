@@ -10,7 +10,7 @@ import MapKit
 
 struct MapView: View {
     var body: some View {
-        ZStack{
+        ZStack(alignment: .top){
             Map{
                 Annotation("", coordinate: CLLocationCoordinate2D(latitude: 45.04, longitude: 35.15)){
                     CheckPointMapMarker(isCheckpoint: .constant(.start))
@@ -25,9 +25,42 @@ struct MapView: View {
                 }
                 
             }
-                .clipShape(RoundedRectangle(cornerRadius: 25))
-                .padding(.top)
-                .padding(.bottom, 150)
+               // .clipShape(RoundedRectangle(cornerRadius: 25))
+               // .padding(.top)
+               // .padding(.bottom, 150)
+            
+           //MARK: - Mini info
+            VStack{
+                Text("01:09:44")
+                    .font(.largeTitle)
+                
+                HStack(spacing: 15){
+                    ForEach(0..<3){ _ in
+                        HStack{
+                            Image(systemName: "person.fill")
+                                .imageScale(.large)
+                            
+                            VStack{
+                                Text("10.9")
+                                Text("KM")
+                                    .font(.footnote)
+                            }
+                            .padding()
+                        }
+                        .background(
+                            RoundedRectangle(cornerRadius: 12)
+                                .foregroundStyle(.bar)
+                                .frame(height: 50)
+                        )
+                    }
+                }
+            }
+            .frame(width: UIScreen.main.bounds.width - 32 ,height: 150)
+            .background(
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(.ultraThinMaterial)
+                    .shadow(color: .black,radius: 10, x: 5, y: 5)
+            )
         }
     }
 }
