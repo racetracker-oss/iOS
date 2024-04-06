@@ -6,9 +6,12 @@
 //
 
 import Foundation
+import MapKit
 
 struct CurrentUser: Codable, Identifiable {
     let id: Int
     let email: String
     let fullname: String
+    let latitude: Double
+    let longitude: Double
 }

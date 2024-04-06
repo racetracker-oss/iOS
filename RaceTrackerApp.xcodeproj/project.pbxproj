@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		985C78132BC1415200C3C7DC /* Annotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C78122BC1415200C3C7DC /* Annotations.swift */; };
+		985C78152BC1445D00C3C7DC /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C78142BC1445C00C3C7DC /* LocationService.swift */; };
 		98ACD8832BBFFA0C0013DAC3 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ACD8822BBFFA0C0013DAC3 /* CustomProgressView.swift */; };
 		98ACD8862BBFFD9C0013DAC3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 98ACD8852BBFFD9C0013DAC3 /* Lottie */; };
 		98ACD8882BBFFDA40013DAC3 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ACD8872BBFFDA40013DAC3 /* LottieView.swift */; };
@@ -60,6 +62,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		985C78122BC1415200C3C7DC /* Annotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotations.swift; sourceTree = "<group>"; };
+		985C78142BC1445C00C3C7DC /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		985C78162BC15A3500C3C7DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		98ACD8822BBFFA0C0013DAC3 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		98ACD8872BBFFDA40013DAC3 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		98ACD8892BBFFDBB0013DAC3 /* Animation - 1712309701482.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Animation - 1712309701482.json"; path = "../../../Downloads/Animation - 1712309701482.json"; sourceTree = "<group>"; };
@@ -146,6 +151,7 @@
 		98E73BD42BBA979400379192 /* RaceTrackerApp */ = {
 			isa = PBXGroup;
 			children = (
+				985C78162BC15A3500C3C7DC /* Info.plist */,
 				98ACD8892BBFFDBB0013DAC3 /* Animation - 1712309701482.json */,
 				98E73BD92BBA979500379192 /* Assets.xcassets */,
 				98E73C0F2BBB248D00379192 /* App */,
@@ -206,6 +212,7 @@
 			children = (
 				98E73C4A2BBFF51B00379192 /* Auth */,
 				98E73C282BBE810800379192 /* API */,
+				985C78142BC1445C00C3C7DC /* LocationService.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -214,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				98E73C2D2BBE824600379192 /* CurrentUser.swift */,
+				985C78122BC1415200C3C7DC /* Annotations.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -533,11 +541,13 @@
 				98E73C302BBE971B00379192 /* AuthService.swift in Sources */,
 				98E73C452BBE9D4D00379192 /* ContentViewModel.swift in Sources */,
 				98E73C492BBEECF400379192 /* CustomTabSelection.swift in Sources */,
+				985C78152BC1445D00C3C7DC /* LocationService.swift in Sources */,
 				98E73C2C2BBE812100379192 /* ApiViewModel.swift in Sources */,
 				98E73C252BBBE16400379192 /* CircleAnimations.swift in Sources */,
 				98E73C472BBEB51500379192 /* CustomGradient.swift in Sources */,
 				98E73C322BBE972300379192 /* LoginViewModel.swift in Sources */,
 				98E73C232BBB3A5300379192 /* CheckPointMapMarker.swift in Sources */,
+				985C78132BC1415200C3C7DC /* Annotations.swift in Sources */,
 				98E73C062BBA980F00379192 /* StatisticsView.swift in Sources */,
 				98E73C022BBA97F700379192 /* MapView.swift in Sources */,
 				98E73C0C2BBAB74400379192 /* LoginView.swift in Sources */,
@@ -717,7 +727,9 @@
 				DEVELOPMENT_TEAM = KB835FKYB4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RaceTrackerApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to the camera to scan barcodes";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to know where are you";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -752,7 +764,9 @@
 				DEVELOPMENT_TEAM = KB835FKYB4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RaceTrackerApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to the camera to scan barcodes";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to know where are you";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

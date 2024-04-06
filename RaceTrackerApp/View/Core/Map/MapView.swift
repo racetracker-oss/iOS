@@ -7,29 +7,42 @@
 
 import SwiftUI
 import MapKit
+import CoreLocation
 
 struct MapView: View {
+    @ObservedObject var viewModel = LocationService()
+    @Namespace var mapScope
+    
     var body: some View {
         ZStack(alignment: .top){
-            Map{
-                Annotation("", coordinate: CLLocationCoordinate2D(latitude: 45.04, longitude: 35.15)){
-                    CheckPointMapMarker(isCheckpoint: .constant(.start))
+                Map(scope: mapScope){
+                    UserAnnotation(anchor: .top)
+                    
+                    ForEach(annotations_mock_data) { anno in
+                        Annotation("", coordinate: anno.coordinates) {
+                            CheckPointMapMarker(isCheckpoint: .constant(.checkpoint))
+                        }
+                        .annotationTitles(.hidden)
+                        
+                    }
                 }
-                
-                Annotation("", coordinate: CLLocationCoordinate2D(latitude: 45.00, longitude: 35.15)){
-                    CheckPointMapMarker(isCheckpoint: .constant(.checkpoint))
-                }
-                
-                Annotation("", coordinate: CLLocationCoordinate2D(latitude: 44.94, longitude: 35.10)){
-                    CheckPointMapMarker(isCheckpoint: .constant(.end))
-                }
-                
-            }
-               // .clipShape(RoundedRectangle(cornerRadius: 25))
-               // .padding(.top)
-               // .padding(.bottom, 150)
+                .mapStyle(.imagery(elevation: .realistic))
+            .mapControls({
+                MapUserLocationButton()
+
+            })
+            .controlSize(.regular)
+            .tint(.primary)
+            .alert(isPresented: $viewModel.locationPermissionDenied, content: {
+                Alert(title: Text("Permission Denied"),
+                      message: Text("Please Enable Permission In App Settings"),
+                      dismissButton: .default(Text("Go To Settings"),
+                                              action: {
+                    UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+                }))
+            })
             
-           //MARK: - Mini info
+            //MARK: - Mini info
             VStack{
                 Text("01:09:44")
                     .font(.largeTitle)
@@ -61,6 +74,8 @@ struct MapView: View {
                     .fill(.ultraThinMaterial)
                     .shadow(color: .black,radius: 10, x: 5, y: 5)
             )
+            .padding(.top, 65)
+            //.padding(.bottom, 165)
         }
     }
 }
@@ -68,3 +83,5 @@ struct MapView: View {
 #Preview {
     MapView()
 }
+
+
