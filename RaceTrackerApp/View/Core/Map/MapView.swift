@@ -12,9 +12,10 @@ import CoreLocation
 struct MapView: View {
     @ObservedObject var viewModel = LocationService()
     @Namespace var mapScope
+    @State private var dropdownMenuTapped = false
     
     var body: some View {
-        ZStack(alignment: .top){
+        ZStack(alignment: .topLeading){
                 Map(scope: mapScope){
                     UserAnnotation(anchor: .top)
                     
@@ -42,40 +43,12 @@ struct MapView: View {
                 }))
             })
             
-            //MARK: - Mini info
-            VStack{
-                Text("01:09:44")
-                    .font(.largeTitle)
-                
-                HStack(spacing: 15){
-                    ForEach(0..<3){ _ in
-                        HStack{
-                            Image(systemName: "person.fill")
-                                .imageScale(.large)
-                            
-                            VStack{
-                                Text("10.9")
-                                Text("KM")
-                                    .font(.footnote)
-                            }
-                            .padding()
-                        }
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .foregroundStyle(.bar)
-                                .frame(height: 50)
-                        )
-                    }
-                }
-            }
-            .frame(width: UIScreen.main.bounds.width - 32 ,height: 150)
-            .background(
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(.ultraThinMaterial)
-                    .shadow(color: .black,radius: 10, x: 5, y: 5)
-            )
-            .padding(.top, 65)
-            //.padding(.bottom, 165)
+            //MARK: - Dropdown Info
+            MiniInfoView(isTapped: $dropdownMenuTapped)
+            //.padding(.top, 65)
+                .padding(.top, 3)
+                .padding(.horizontal,8)
+                //.padding(.trailing, 50)
         }
     }
 }

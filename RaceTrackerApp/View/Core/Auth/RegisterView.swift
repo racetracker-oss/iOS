@@ -11,76 +11,39 @@ struct RegisterView: View {
     @State private var emailText: String = ""
     @State private var usernameText: String = ""
     @State private var fullNameText: String = ""
+    
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        ZStack{
+        ZStack(alignment: .center){
             Color.backGround.ignoresSafeArea()
             
-            VStack(spacing: 15){
+            VStack(alignment: .center,spacing: 15){
                 Spacer()
                 
-                TextField("Email", text: $emailText)
-                    .padding()
-                    .frame(width: UIScreen.main.bounds.width - 32, height: 50)
-                    .background(
-                        RoundedRectangle(cornerRadius: 12)
-                            .foregroundStyle(Color(.systemGray6))
-                    )
+                CustomTextField(placeholder: "Email", inputText: $emailText)
                 
-                TextField("username", text: $usernameText)
-                    .padding()
-                    .frame(width: UIScreen.main.bounds.width - 32, height: 50)
-                    .background(
-                        RoundedRectangle(cornerRadius: 12)
-                            .foregroundStyle(Color(.systemGray6))
-                    )
+                CustomTextField(placeholder: "Username", inputText: $usernameText)
                 
-                TextField("Fullname", text: $fullNameText)
-                    .padding()
-                    .frame(width: UIScreen.main.bounds.width - 32, height: 50)
-                    .background(
-                        RoundedRectangle(cornerRadius: 12)
-                            .foregroundStyle(Color(.systemGray6))
-                    )
-                
-               
-                Button(action: {
-                    //
-                }, label: {
-                    Text("Sign up")
-                        .font(.title3)
-                        .fontWeight(.heavy)
-                        .foregroundStyle(.orange)
+                CustomTextField(placeholder: "Full name", inputText: $fullNameText)
+
+                CustomAuthButton(isSignInButton: false, void: {
+                    print("sign up tapped")
                 })
-                .padding()
-                .frame(width: UIScreen.main.bounds.width - 32, height: 50)
-                
-                .background(
-                    RoundedRectangle(cornerRadius: 25)
-                        
-                        .foregroundStyle(Color(.systemGray6))
-                )
                 .padding(.top)
                 
                 Spacer()
+               
+                CustomAuthNavigation(willNavigate: false)
                 
-                Button(action: {
-                    dismiss()
-                }, label: {
-                    Text("Already have you an account? ")
-                        .foregroundStyle(.gray) +
-                    
-                    Text(" Sign in!")
-                        .foregroundStyle(.orange)
-                        .bold()
-                })
 
             }
         }
         .navigationBarBackButtonHidden()
     }
 }
+
+
 
 #Preview {
     RegisterView()

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		985C78132BC1415200C3C7DC /* Annotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C78122BC1415200C3C7DC /* Annotations.swift */; };
 		985C78152BC1445D00C3C7DC /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C78142BC1445C00C3C7DC /* LocationService.swift */; };
+		985C78182BC16F4F00C3C7DC /* MiniInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C78172BC16F4F00C3C7DC /* MiniInfoView.swift */; };
+		985C781A2BC1C85500C3C7DC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C78192BC1C85500C3C7DC /* CustomTextField.swift */; };
+		985C781C2BC1C8BF00C3C7DC /* CustomAuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C781B2BC1C8BF00C3C7DC /* CustomAuthButton.swift */; };
+		985C781E2BC1CBED00C3C7DC /* CustomAuthNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C781D2BC1CBED00C3C7DC /* CustomAuthNavigation.swift */; };
 		98ACD8832BBFFA0C0013DAC3 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ACD8822BBFFA0C0013DAC3 /* CustomProgressView.swift */; };
 		98ACD8862BBFFD9C0013DAC3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 98ACD8852BBFFD9C0013DAC3 /* Lottie */; };
 		98ACD8882BBFFDA40013DAC3 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ACD8872BBFFDA40013DAC3 /* LottieView.swift */; };
@@ -65,6 +69,10 @@
 		985C78122BC1415200C3C7DC /* Annotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotations.swift; sourceTree = "<group>"; };
 		985C78142BC1445C00C3C7DC /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		985C78162BC15A3500C3C7DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		985C78172BC16F4F00C3C7DC /* MiniInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniInfoView.swift; sourceTree = "<group>"; };
+		985C78192BC1C85500C3C7DC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		985C781B2BC1C8BF00C3C7DC /* CustomAuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAuthButton.swift; sourceTree = "<group>"; };
+		985C781D2BC1CBED00C3C7DC /* CustomAuthNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAuthNavigation.swift; sourceTree = "<group>"; };
 		98ACD8822BBFFA0C0013DAC3 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		98ACD8872BBFFDA40013DAC3 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		98ACD8892BBFFDBB0013DAC3 /* Animation - 1712309701482.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Animation - 1712309701482.json"; path = "../../../Downloads/Animation - 1712309701482.json"; sourceTree = "<group>"; };
@@ -370,6 +378,7 @@
 		98E73C502BBFF69700379192 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				985C78172BC16F4F00C3C7DC /* MiniInfoView.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -391,6 +400,9 @@
 		98E73C532BBFF6A900379192 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				985C78192BC1C85500C3C7DC /* CustomTextField.swift */,
+				985C781B2BC1C8BF00C3C7DC /* CustomAuthButton.swift */,
+				985C781D2BC1CBED00C3C7DC /* CustomAuthNavigation.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -539,6 +551,7 @@
 				98ACD8882BBFFDA40013DAC3 /* LottieView.swift in Sources */,
 				98E73C0E2BBAB96600379192 /* RegisterView.swift in Sources */,
 				98E73C302BBE971B00379192 /* AuthService.swift in Sources */,
+				985C781A2BC1C85500C3C7DC /* CustomTextField.swift in Sources */,
 				98E73C452BBE9D4D00379192 /* ContentViewModel.swift in Sources */,
 				98E73C492BBEECF400379192 /* CustomTabSelection.swift in Sources */,
 				985C78152BC1445D00C3C7DC /* LocationService.swift in Sources */,
@@ -549,6 +562,7 @@
 				98E73C232BBB3A5300379192 /* CheckPointMapMarker.swift in Sources */,
 				985C78132BC1415200C3C7DC /* Annotations.swift in Sources */,
 				98E73C062BBA980F00379192 /* StatisticsView.swift in Sources */,
+				985C781C2BC1C8BF00C3C7DC /* CustomAuthButton.swift in Sources */,
 				98E73C022BBA97F700379192 /* MapView.swift in Sources */,
 				98E73C0C2BBAB74400379192 /* LoginView.swift in Sources */,
 				98ACD8832BBFFA0C0013DAC3 /* CustomProgressView.swift in Sources */,
@@ -558,7 +572,9 @@
 				98E73BD82BBA979400379192 /* ContentView.swift in Sources */,
 				98E73C2A2BBE811B00379192 /* ApiService.swift in Sources */,
 				98E73C272BBBEFBF00379192 /* GuideView.swift in Sources */,
+				985C781E2BC1CBED00C3C7DC /* CustomAuthNavigation.swift in Sources */,
 				98E73BD62BBA979400379192 /* RaceTrackerAppApp.swift in Sources */,
+				985C78182BC16F4F00C3C7DC /* MiniInfoView.swift in Sources */,
 				98E73C0A2BBA9F3700379192 /* BarcodeView.swift in Sources */,
 				98E73C4C2BBFF5DD00379192 /* RegisterViewModel.swift in Sources */,
 			);

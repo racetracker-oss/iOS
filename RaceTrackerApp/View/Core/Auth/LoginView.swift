@@ -10,34 +10,22 @@ import SwiftUI
 struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
-  //  @StateObject var viewModel = LoginViewModel()
-
+    
     var body: some View {
         NavigationStack{
-            ZStack(alignment: .top){
+            ZStack(alignment: .center){
                 Color.backGround.ignoresSafeArea()
+                
                 CircleAnimations()
                     .padding(.top, 100)
-                    
                 
                 VStack(spacing: 15){
                     Spacer()
                     
-                    TextField("Email", text: $email)
-                        .padding()
-                        .frame(width: UIScreen.main.bounds.width - 32, height: 50)
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .foregroundStyle(Color(.systemGray6))
-                        )
+                    CustomTextField(placeholder: "Email", inputText: $email)
                     
-                    SecureField("Password", text: $password)
-                        .padding()
-                        .frame(width: UIScreen.main.bounds.width - 32, height: 50)
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .foregroundStyle(Color(.systemGray6))
-                        )
+                    CustomTextField(placeholder: "Password", inputText: $password, isSecureField: true)
+                    
                     VStack{
                         HStack{
                             Spacer()
@@ -52,37 +40,15 @@ struct LoginView: View {
                             .padding()
                         }
                     }
-                    Button(action: {
-                      //  Task { try await viewModel.loginUser() }
-                            
-                    }, label: {
-                        Text("Sign in")
-                            .font(.title3)
-                            .foregroundStyle(.orange)
-                            .fontWeight(.heavy)
-                    })
-                    .padding()
-                    .frame(width: UIScreen.main.bounds.width - 32, height: 50)
                     
-                    .background(
-                        RoundedRectangle(cornerRadius: 25)
-                        
-                            .foregroundStyle(Color(.systemGray6))
-                    )
+                    CustomAuthButton(isSignInButton: true) {
+                        print("sign in")
+                        //  Task { try await viewModel.loginUser() }
+                    }
                     
                     Spacer()
                     
-                    NavigationLink {
-                        RegisterView()
-                    } label: {
-                        Text("Don't you have an account? ")
-                            .foregroundStyle(.gray) +
-                        
-                        Text(" Sign up!")
-                            .foregroundStyle(.orange)
-                            .bold()
-                    }
-                    
+                    CustomAuthNavigation(willNavigate: true)
                 }
             }
         }
