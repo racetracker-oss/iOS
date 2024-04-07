@@ -7,33 +7,8 @@
 
 import SwiftUI
 
-enum MainTabSelection: Int, CaseIterable, Identifiable {
-    case home
-    case map
-    case barcode
-    case statistics
-    case profile
-    
-    var imageName: String {
-        switch self {
-        case .home:
-            return "house.fill"
-        case .map:
-            return "map.fill"
-        case .barcode:
-            return "barcode"
-        case .statistics:
-            return "figure.outdoor.cycle"
-        case .profile:
-            return "person.fill"
-        }
-    }
-    
-    var id: Int {return self.rawValue}
-}
-
 struct MainTabView: View {
-    @State private var selectedIndex = 0
+    @State private var selectedIndex: MainTabSelection.AllCases.Element = .home //= 0
     @State private var symbolAnimate = false
     @State private var rotation: Double = 0.0
     
@@ -42,20 +17,22 @@ struct MainTabView: View {
             Color.backGround.ignoresSafeArea()
             
             switch selectedIndex {
-            case 0:
+            case .home:
                 HomeView()
-            case 1:
+                
+            case .map:
                 MapView()
-            case 2:
+                
+            case .barcode:
                 // BarcodeView()
                 CustomBarode()
-            case 3:
-                StatisticsView()
-            case 4:
-                ProfileView()
-            default:
-                ProgressView()
                 
+            case .statistics:
+                StatisticsView()
+                
+            case .profile:
+                ProfileView()
+           
             }
             
             VStack{
@@ -65,23 +42,23 @@ struct MainTabView: View {
                     ForEach(MainTabSelection.allCases){ section in
                         Button(action: {
                             withAnimation(.snappy.speed(2)){
-                                selectedIndex = section.rawValue
+                                selectedIndex = section
                                 symbolAnimate.toggle()
                             }
                         }, label: {
                             ZStack{
                                 Circle()
                                     .frame(height: 55)
-                                    .foregroundStyle(selectedIndex == section.rawValue ? .orange : .tab)
+                                    .foregroundStyle(selectedIndex == section ? .orange : .tab)
                                 
                                 Image(systemName: section.imageName)
                                     .symbolEffect(.bounce, value: symbolAnimate)
-                                    .font(.system(size: selectedIndex == section.rawValue ? 28 : 22))
+                                    .font(.system(size: selectedIndex == section ? 28 : 22))
                                 
-                                    .foregroundStyle(selectedIndex == section.rawValue ? .white : .orange)
+                                    .foregroundStyle(selectedIndex == section ? .white : .orange)
                             }
                         })
-                        .offset(y: selectedIndex == section.rawValue ? -8 : 0)
+                        .offset(y: selectedIndex == section ? -8 : 0)
                     }
                 }
                 .frame(width: UIScreen.main.bounds.width - 32 , height: 90)
@@ -111,7 +88,6 @@ struct MainTabView: View {
                             }
                     }
                 )
-                
             }
             .onAppear{
                 withAnimation(.linear(duration: 3.1).repeatForever(autoreverses: false)){
@@ -122,29 +98,6 @@ struct MainTabView: View {
     }
 }
 
-//struct TabShape: Shape{
-//    var midpoint: CGFloat
-//
-//    func path(in rect: CGRect) -> Path {
-//        return Path { path in
-//            path.addPath(Rectangle().path(in: rect))
-//            path.move(to: .init(x: midpoint - 60, y: 0))
-//
-//            let to = CGPoint(x: midpoint, y: -25)
-//            let control1 = CGPoint(x: midpoint - 25, y: 0)
-//            let control2 = CGPoint(x: midpoint - 25, y: -25)
-//
-//            path.addCurve(to: to, control1: control1, control2: control2)
-//
-//            let to1 = CGPoint(x: midpoint + 60, y: 0)
-//            let control3 = CGPoint(x: midpoint + 25, y: -25)
-//            let control4 = CGPoint(x: midpoint + 25, y: 0)
-//
-//            path.addCurve(to: to1, control1: control3, control2: control4)
-//
-//        }
-//    }
-//}
 
 #Preview {
     MainTabView()

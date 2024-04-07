@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CustomGradient: View {
+struct TapToScanView: View {
     @State private var rotation: CGFloat = 0.0
     var body: some View {
         ZStack{
@@ -31,6 +31,7 @@ struct CustomGradient: View {
                         .stroke(lineWidth: 3)
                         .frame(width: 256, height: 336)
                 }
+            
             Text("Tap to scan")
                 .fontWeight(.heavy)
                 .font(.largeTitle)
@@ -46,5 +47,5 @@ struct CustomGradient: View {
 }
 
 #Preview {
-    CustomGradient()
+    TapToScanView()
 }

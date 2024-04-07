@@ -12,6 +12,7 @@ enum CustomMapMarkerSection {
     case checkpoint
     case end
 }
+
 struct CheckPointMapMarker: View {
     @Binding var isCheckpoint: CustomMapMarkerSection
     var body: some View {

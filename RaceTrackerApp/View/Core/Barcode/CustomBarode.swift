@@ -21,7 +21,7 @@ struct CustomBarode: View {
             Button(action: {
                 isShowingScanner.toggle()
             }, label: {
-                CustomGradient()
+                TapToScanView()
             })
             .sheet(isPresented: $isShowingScanner, content: {
                 CodeScannerView(codeTypes: [.qr]) { result in

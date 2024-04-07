@@ -17,14 +17,14 @@ struct LoginView: View {
                 Color.backGround.ignoresSafeArea()
                 
                 CircleAnimations()
-                    .padding(.top, 100)
+                    .padding(.top, 30)
                 
                 VStack(spacing: 15){
                     Spacer()
                     
-                    CustomTextField(placeholder: "Email", inputText: $email)
+                    CustomTextField(placeholder: PlaceholderTypes.email, inputText: $email)
                     
-                    CustomTextField(placeholder: "Password", inputText: $password, isSecureField: true)
+                    CustomTextField(placeholder: PlaceholderTypes.password, inputText: $password, isSecureField: true)
                     
                     VStack{
                         HStack{
@@ -41,14 +41,14 @@ struct LoginView: View {
                         }
                     }
                     
-                    CustomAuthButton(isSignInButton: true) {
+                    AuthButton(isSignInButton: true) {
                         print("sign in")
                         //  Task { try await viewModel.loginUser() }
                     }
                     
                     Spacer()
                     
-                    CustomAuthNavigation(willNavigate: true)
+                    AuthNavigation(isNavigationLink: true)
                 }
             }
         }

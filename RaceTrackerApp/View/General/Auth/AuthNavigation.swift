@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct CustomAuthNavigation: View {
+struct AuthNavigation: View {
     @Environment(\.dismiss) var dismiss
-    let willNavigate: Bool
+    var isNavigationLink: Bool?
     
     var body: some View {
-        if willNavigate {
+        if isNavigationLink == true {
             NavigationLink {
                 RegisterView()
             } label: {
@@ -39,5 +39,5 @@ struct CustomAuthNavigation: View {
 }
 
 #Preview {
-    CustomAuthNavigation(willNavigate: true)
+    AuthNavigation(isNavigationLink: true)
 }

@@ -7,17 +7,24 @@
 
 import SwiftUI
 
+enum PlaceholderTypes: String {
+    case email = "Email"
+    case password = "Password"
+    case fullname = "Fullname"
+    case username = "Username"
+}
+
 struct CustomTextField: View {
-    let placeholder: String
+    let placeholder: PlaceholderTypes
     @Binding var inputText: String
     var isSecureField: Bool?
     
     var body: some View {
         if isSecureField == true {
-            SecureField(placeholder, text: $inputText)
+            SecureField(placeholder.rawValue, text: $inputText)
                 .modifier(CustomTextFieldModifier())
         } else {
-            TextField(placeholder, text: $inputText)
+            TextField(placeholder.rawValue, text: $inputText)
                 .modifier(CustomTextFieldModifier())
         }
     }
@@ -36,5 +43,5 @@ struct CustomTextFieldModifier: ViewModifier{
 }
 
 #Preview {
-    CustomTextField(placeholder: "Email", inputText: .constant(""))
+    CustomTextField(placeholder: PlaceholderTypes.email, inputText: .constant(""))
 }

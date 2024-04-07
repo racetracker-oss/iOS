@@ -7,23 +7,22 @@
 
 import SwiftUI
 
-struct CustomAuthButton: View {
+struct AuthButton: View {
     let isSignInButton: Bool
     let void: () -> Void
     
     var body: some View {
         Button(action: {
-           
             void()
         }, label: {
             Text(isSignInButton ? "Sign in" : "Sign up")
                 
         })
-        .modifier(CustomAuthButtonModifier())
+        .modifier(AuthButtonModifier())
     }
 }
 
-struct CustomAuthButtonModifier: ViewModifier {
+struct AuthButtonModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.title3)
