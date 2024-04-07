@@ -7,32 +7,25 @@
 
 import Foundation
 import CoreLocation
-import MapKit
+//import MapKit
  
-
 class LocationService: NSObject, ObservableObject {
     @Published var locationPermissionDenied = false
-    @Published var hasSetRegion = false
-
     @Published var currentUserLocation: CLLocation?
-    
-//    @Published var region = MKCoordinateRegion(
-//        center: CLLocationCoordinate2D(latitude: locationManager.location?.coordinate.latitude ?? 0.0, longitude: -77.034340),
-//            span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1)
-//        )
-  
+      
     private let locationManager = CLLocationManager()
     
     override init() {
         super.init()
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.setup()
-        print("latitude is: \(locationManager.location?.coordinate.latitude)")
-        print("longitude is: \(locationManager.location?.coordinate.longitude)")
+        self.permissionsSetup()
+       // print("latitude is: \(locationManager.location?.coordinate.latitude)")
+       // print("longitude is: \(locationManager.location?.coordinate.longitude)")
+        
     }
     
-    func setup() {
+    func permissionsSetup() {
         switch locationManager.authorizationStatus {
         case .notDetermined:
             self.locationManager.requestWhenInUseAuthorization()
@@ -53,6 +46,7 @@ class LocationService: NSObject, ObservableObject {
 }
 
 extension LocationService: CLLocationManagerDelegate {
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Locationmanager failed with error: \(error.localizedDescription)")
     }
@@ -64,8 +58,9 @@ extension LocationService: CLLocationManagerDelegate {
      
      func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
          guard let location = locations.first else { return }
-        
-        self.currentUserLocation = location
-        
+         
+         self.currentUserLocation = location
+        // print("USERLOCATION LATITUDE IS: \(currentUserLocation?.coordinate.latitude)")
+        // print("USERLOCATION LONGITUDE IS: \(currentUserLocation?.coordinate.longitude)")
      }
 }

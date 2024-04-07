@@ -44,7 +44,7 @@ struct CustomTabSelection: View {
                 Rectangle()
                     .frame(width: UIScreen.main.bounds.width  / CGFloat(tabItems.allCases.count ), height: 4)
                     .offset(x: CGFloat(selectedIndex) * UIScreen.main.bounds.width / CGFloat(tabItems.allCases.count))
-                    .padding(.trailing, 160)
+                    .padding(.trailing, 195)
             }
             .frame(maxWidth: .infinity)
         }
