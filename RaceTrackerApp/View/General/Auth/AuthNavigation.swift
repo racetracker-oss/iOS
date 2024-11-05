@@ -9,34 +9,36 @@ import SwiftUI
 
 struct AuthNavigation: View {
     @Environment(\.dismiss) var dismiss
-    var isNavigationLink: Bool?
+    var isNavigationLink: Bool = false
     
     var body: some View {
-        if isNavigationLink == true {
+        if isNavigationLink {
             NavigationLink {
                 RegisterView()
             } label: {
-                Text("Don't you have an account? ")
-                    .foregroundStyle(.gray) +
-                
-                Text(" Sign up!")
-                    .foregroundStyle(.orange)
-                    .bold()
+                authText("Don't you have an account?", actionText: "Sign up!")
             }
         } else {
-            Button(action: {
+            Button {
                 dismiss()
-            }, label: {
-                Text("Already have you an account? ")
-                    .foregroundStyle(.gray) +
-                
-                Text(" Sign in!")
-                    .foregroundStyle(.orange)
-                    .bold()
-            })
+            } label: {
+                authText("Already have an account?", actionText: "Sign in")
+            }
+
         }
+        
+    }
+    private func authText(_ mainText: String, actionText: String) -> some View {
+        Text(mainText)
+            .foregroundStyle(.gray) +
+        
+        Text(" \(actionText)")
+            .foregroundStyle(.orange)
+            .bold()
     }
 }
+
+
 
 #Preview {
     AuthNavigation(isNavigationLink: true)

@@ -16,9 +16,7 @@ struct ProfileView: View {
                 .foregroundStyle(.green)
             
             Button(action: {
-                withAnimation {
-                   // AuthService.shared.signOut()
-                }
+                
             }, label: {
                 Text("Sign out")
             })

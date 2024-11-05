@@ -43,7 +43,6 @@ struct LoginView: View {
                     
                     AuthButton(isSignInButton: true) {
                         print("sign in")
-                        //  Task { try await viewModel.loginUser() }
                     }
                     
                     Spacer()

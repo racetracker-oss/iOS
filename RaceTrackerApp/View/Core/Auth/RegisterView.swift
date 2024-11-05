@@ -9,8 +9,6 @@ import SwiftUI
 
 struct RegisterView: View {
     @State private var emailText: String = ""
-    @State private var usernameText: String = ""
-    @State private var fullNameText: String = ""
         
     var body: some View {
         ZStack(alignment: .center){
@@ -20,10 +18,7 @@ struct RegisterView: View {
                 Spacer()
                 
                 CustomTextField(placeholder: PlaceholderTypes.email, inputText: $emailText)
-                
-                CustomTextField(placeholder: PlaceholderTypes.username, inputText: $usernameText)
-                
-                CustomTextField(placeholder: PlaceholderTypes.fullname, inputText: $fullNameText)
+                                
 
                 AuthButton(isSignInButton: false, void: {
                     print("sign up tapped")

@@ -7,8 +7,34 @@
 
 import SwiftUI
 
+enum MainTabSelection: Int, CaseIterable, Identifiable {
+    case home
+    case map
+    case qrcode
+    case statistics
+    case profile
+    
+    var imageName: String {
+        switch self {
+        case .home:
+            return "house.fill"
+        case .map:
+            return "map.fill"
+        case .qrcode:
+            return "barcode"
+        case .statistics:
+            return "figure.outdoor.cycle"
+        case .profile:
+            return "person.fill"
+        }
+    }
+    
+    var id: Int {return self.rawValue}
+}
+
+
 struct MainTabView: View {
-    @State private var selectedIndex: MainTabSelection.AllCases.Element = .home //= 0
+    @State private var selectedIndex: MainTabSelection.AllCases.Element = .home
     @State private var symbolAnimate = false
     @State private var rotation: Double = 0.0
     
@@ -23,16 +49,15 @@ struct MainTabView: View {
             case .map:
                 MapView()
                 
-            case .barcode:
-                // BarcodeView()
-                CustomBarode()
+            case .qrcode:
+                ScanView()
                 
             case .statistics:
                 StatisticsView()
                 
             case .profile:
                 ProfileView()
-           
+                
             }
             
             VStack{
@@ -63,12 +88,6 @@ struct MainTabView: View {
                 }
                 .frame(width: UIScreen.main.bounds.width - 32 , height: 90)
                 .background(
-                    //                    RoundedRectangle(cornerRadius: 25)
-                    //                        .stroke(.gray.opacity(0.1),style: StrokeStyle())
-                    //                        .foregroundStyle(.tab)
-                    //                        .shadow(color: .tab.opacity(0.2), radius: 5 ,x: 0, y: -5)
-                    //                        .blur(radius: 2)
-                    
                     ZStack{
                         RoundedRectangle(cornerRadius: 20, style: .continuous)
                             .frame(width: UIScreen.main.bounds.width - 32 ,height: 90)

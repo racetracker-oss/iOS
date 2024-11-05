@@ -13,11 +13,9 @@
 		985C781A2BC1C85500C3C7DC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C78192BC1C85500C3C7DC /* CustomTextField.swift */; };
 		985C781C2BC1C8BF00C3C7DC /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C781B2BC1C8BF00C3C7DC /* AuthButton.swift */; };
 		985C781E2BC1CBED00C3C7DC /* AuthNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C781D2BC1CBED00C3C7DC /* AuthNavigation.swift */; };
-		985C78212BC286BE00C3C7DC /* MainTabSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C78202BC286BE00C3C7DC /* MainTabSelection.swift */; };
 		98ACD8832BBFFA0C0013DAC3 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ACD8822BBFFA0C0013DAC3 /* CustomProgressView.swift */; };
 		98ACD8862BBFFD9C0013DAC3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 98ACD8852BBFFD9C0013DAC3 /* Lottie */; };
 		98ACD8882BBFFDA40013DAC3 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ACD8872BBFFDA40013DAC3 /* LottieView.swift */; };
-		98ACD88A2BBFFDBB0013DAC3 /* Animation - 1712309701482.json in Resources */ = {isa = PBXBuildFile; fileRef = 98ACD8892BBFFDBB0013DAC3 /* Animation - 1712309701482.json */; };
 		98E73BD62BBA979400379192 /* RaceTrackerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73BD52BBA979400379192 /* RaceTrackerAppApp.swift */; };
 		98E73BD82BBA979400379192 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73BD72BBA979400379192 /* ContentView.swift */; };
 		98E73BDA2BBA979500379192 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98E73BD92BBA979500379192 /* Assets.xcassets */; };
@@ -30,23 +28,17 @@
 		98E73C042BBA980300379192 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C032BBA980300379192 /* ProfileView.swift */; };
 		98E73C062BBA980F00379192 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C052BBA980F00379192 /* StatisticsView.swift */; };
 		98E73C082BBA981A00379192 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C072BBA981A00379192 /* MainTabView.swift */; };
-		98E73C0A2BBA9F3700379192 /* BarcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C092BBA9F3700379192 /* BarcodeView.swift */; };
+		98E73C0A2BBA9F3700379192 /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C092BBA9F3700379192 /* QRCodeView.swift */; };
 		98E73C0C2BBAB74400379192 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C0B2BBAB74400379192 /* LoginView.swift */; };
 		98E73C0E2BBAB96600379192 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C0D2BBAB96600379192 /* RegisterView.swift */; };
 		98E73C1F2BBB2CF000379192 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 98E73C1E2BBB2CF000379192 /* CodeScanner */; };
-		98E73C212BBB2D0200379192 /* CustomBarode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C202BBB2D0200379192 /* CustomBarode.swift */; };
+		98E73C212BBB2D0200379192 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C202BBB2D0200379192 /* ScanView.swift */; };
 		98E73C232BBB3A5300379192 /* CheckPointMapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C222BBB3A5300379192 /* CheckPointMapMarker.swift */; };
 		98E73C252BBBE16400379192 /* CircleAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C242BBBE16400379192 /* CircleAnimations.swift */; };
 		98E73C272BBBEFBF00379192 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C262BBBEFBF00379192 /* GuideView.swift */; };
-		98E73C2A2BBE811B00379192 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C292BBE811B00379192 /* ApiService.swift */; };
-		98E73C2C2BBE812100379192 /* ApiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C2B2BBE812100379192 /* ApiViewModel.swift */; };
 		98E73C2E2BBE824600379192 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C2D2BBE824600379192 /* CurrentUser.swift */; };
-		98E73C302BBE971B00379192 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C2F2BBE971B00379192 /* AuthService.swift */; };
-		98E73C322BBE972300379192 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C312BBE972300379192 /* LoginViewModel.swift */; };
-		98E73C452BBE9D4D00379192 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C442BBE9D4D00379192 /* ContentViewModel.swift */; };
 		98E73C472BBEB51500379192 /* TapToScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C462BBEB51500379192 /* TapToScanView.swift */; };
 		98E73C492BBEECF400379192 /* CustomTabSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C482BBEECF400379192 /* CustomTabSelection.swift */; };
-		98E73C4C2BBFF5DD00379192 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E73C4B2BBFF5DD00379192 /* RegisterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,10 +66,8 @@
 		985C78192BC1C85500C3C7DC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		985C781B2BC1C8BF00C3C7DC /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		985C781D2BC1CBED00C3C7DC /* AuthNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigation.swift; sourceTree = "<group>"; };
-		985C78202BC286BE00C3C7DC /* MainTabSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabSelection.swift; sourceTree = "<group>"; };
 		98ACD8822BBFFA0C0013DAC3 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		98ACD8872BBFFDA40013DAC3 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		98ACD8892BBFFDBB0013DAC3 /* Animation - 1712309701482.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Animation - 1712309701482.json"; path = "../../../Downloads/Animation - 1712309701482.json"; sourceTree = "<group>"; };
 		98E73BD22BBA979400379192 /* RaceTrackerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaceTrackerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E73BD52BBA979400379192 /* RaceTrackerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceTrackerAppApp.swift; sourceTree = "<group>"; };
 		98E73BD72BBA979400379192 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,22 +83,16 @@
 		98E73C032BBA980300379192 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		98E73C052BBA980F00379192 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		98E73C072BBA981A00379192 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		98E73C092BBA9F3700379192 /* BarcodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeView.swift; sourceTree = "<group>"; };
+		98E73C092BBA9F3700379192 /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
 		98E73C0B2BBAB74400379192 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		98E73C0D2BBAB96600379192 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		98E73C202BBB2D0200379192 /* CustomBarode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarode.swift; sourceTree = "<group>"; };
+		98E73C202BBB2D0200379192 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		98E73C222BBB3A5300379192 /* CheckPointMapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPointMapMarker.swift; sourceTree = "<group>"; };
 		98E73C242BBBE16400379192 /* CircleAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAnimations.swift; sourceTree = "<group>"; };
 		98E73C262BBBEFBF00379192 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
-		98E73C292BBE811B00379192 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
-		98E73C2B2BBE812100379192 /* ApiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiViewModel.swift; sourceTree = "<group>"; };
 		98E73C2D2BBE824600379192 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
-		98E73C2F2BBE971B00379192 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		98E73C312BBE972300379192 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		98E73C442BBE9D4D00379192 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		98E73C462BBEB51500379192 /* TapToScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapToScanView.swift; sourceTree = "<group>"; };
 		98E73C482BBEECF400379192 /* CustomTabSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabSelection.swift; sourceTree = "<group>"; };
-		98E73C4B2BBFF5DD00379192 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,12 +122,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		985C781F2BC286AD00C3C7DC /* Tab */ = {
+		98C9D6C12CDA80D9002170FB /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				985C78202BC286BE00C3C7DC /* MainTabSelection.swift */,
+				985C78142BC1445C00C3C7DC /* LocationService.swift */,
 			);
-			path = Tab;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		98E73BC92BBA979400379192 = {
@@ -169,13 +153,13 @@
 		98E73BD42BBA979400379192 /* RaceTrackerApp */ = {
 			isa = PBXGroup;
 			children = (
+				98C9D6C12CDA80D9002170FB /* Services */,
 				985C78162BC15A3500C3C7DC /* Info.plist */,
-				98ACD8892BBFFDBB0013DAC3 /* Animation - 1712309701482.json */,
 				98E73BD92BBA979500379192 /* Assets.xcassets */,
 				98E73C0F2BBB248D00379192 /* App */,
 				98E73C122BBB24A200379192 /* Model */,
 				98E73BDB2BBA979500379192 /* Preview Content */,
-				98E73C162BBB24D500379192 /* Utils */,
+				98E73C162BBB24D500379192 /* Helpers */,
 				98E73C102BBB249900379192 /* View */,
 				98E73C112BBB249D00379192 /* ViewModel */,
 			);
@@ -228,10 +212,6 @@
 		98E73C112BBB249D00379192 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				985C781F2BC286AD00C3C7DC /* Tab */,
-				98E73C4A2BBFF51B00379192 /* Auth */,
-				98E73C282BBE810800379192 /* API */,
-				985C78142BC1445C00C3C7DC /* LocationService.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -282,7 +262,7 @@
 			path = General;
 			sourceTree = "<group>";
 		};
-		98E73C162BBB24D500379192 /* Utils */ = {
+		98E73C162BBB24D500379192 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				98E73C482BBEECF400379192 /* CustomTabSelection.swift */,
@@ -292,7 +272,7 @@
 				98ACD8822BBFFA0C0013DAC3 /* CustomProgressView.swift */,
 				98ACD8872BBFFDA40013DAC3 /* LottieView.swift */,
 			);
-			path = Utils;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		98E73C172BBB24F200379192 /* Home */ = {
@@ -322,8 +302,8 @@
 		98E73C1A2BBB250200379192 /* Barcode */ = {
 			isa = PBXGroup;
 			children = (
-				98E73C092BBA9F3700379192 /* BarcodeView.swift */,
-				98E73C202BBB2D0200379192 /* CustomBarode.swift */,
+				98E73C092BBA9F3700379192 /* QRCodeView.swift */,
+				98E73C202BBB2D0200379192 /* ScanView.swift */,
 			);
 			path = Barcode;
 			sourceTree = "<group>";
@@ -342,26 +322,6 @@
 				98E73C462BBEB51500379192 /* TapToScanView.swift */,
 			);
 			path = Barcode;
-			sourceTree = "<group>";
-		};
-		98E73C282BBE810800379192 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				98E73C292BBE811B00379192 /* ApiService.swift */,
-				98E73C2B2BBE812100379192 /* ApiViewModel.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		98E73C4A2BBFF51B00379192 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				98E73C442BBE9D4D00379192 /* ContentViewModel.swift */,
-				98E73C2F2BBE971B00379192 /* AuthService.swift */,
-				98E73C312BBE972300379192 /* LoginViewModel.swift */,
-				98E73C4B2BBFF5DD00379192 /* RegisterViewModel.swift */,
-			);
-			path = Auth;
 			sourceTree = "<group>";
 		};
 		98E73C4D2BBFF61D00379192 /* Tab */ = {
@@ -532,7 +492,6 @@
 			files = (
 				98E73BDD2BBA979500379192 /* Preview Assets.xcassets in Resources */,
 				98E73BDA2BBA979500379192 /* Assets.xcassets in Resources */,
-				98ACD88A2BBFFDBB0013DAC3 /* Animation - 1712309701482.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,38 +516,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98E73C212BBB2D0200379192 /* CustomBarode.swift in Sources */,
+				98E73C212BBB2D0200379192 /* ScanView.swift in Sources */,
 				98E73C002BBA97E800379192 /* HomeView.swift in Sources */,
 				98ACD8882BBFFDA40013DAC3 /* LottieView.swift in Sources */,
 				98E73C0E2BBAB96600379192 /* RegisterView.swift in Sources */,
-				98E73C302BBE971B00379192 /* AuthService.swift in Sources */,
 				985C781A2BC1C85500C3C7DC /* CustomTextField.swift in Sources */,
-				98E73C452BBE9D4D00379192 /* ContentViewModel.swift in Sources */,
 				98E73C492BBEECF400379192 /* CustomTabSelection.swift in Sources */,
 				985C78152BC1445D00C3C7DC /* LocationService.swift in Sources */,
-				98E73C2C2BBE812100379192 /* ApiViewModel.swift in Sources */,
 				98E73C252BBBE16400379192 /* CircleAnimations.swift in Sources */,
 				98E73C472BBEB51500379192 /* TapToScanView.swift in Sources */,
-				98E73C322BBE972300379192 /* LoginViewModel.swift in Sources */,
 				98E73C232BBB3A5300379192 /* CheckPointMapMarker.swift in Sources */,
 				985C78132BC1415200C3C7DC /* Annotations.swift in Sources */,
 				98E73C062BBA980F00379192 /* StatisticsView.swift in Sources */,
 				985C781C2BC1C8BF00C3C7DC /* AuthButton.swift in Sources */,
 				98E73C022BBA97F700379192 /* MapView.swift in Sources */,
 				98E73C0C2BBAB74400379192 /* LoginView.swift in Sources */,
-				985C78212BC286BE00C3C7DC /* MainTabSelection.swift in Sources */,
 				98ACD8832BBFFA0C0013DAC3 /* CustomProgressView.swift in Sources */,
 				98E73C042BBA980300379192 /* ProfileView.swift in Sources */,
 				98E73C082BBA981A00379192 /* MainTabView.swift in Sources */,
 				98E73C2E2BBE824600379192 /* CurrentUser.swift in Sources */,
 				98E73BD82BBA979400379192 /* ContentView.swift in Sources */,
-				98E73C2A2BBE811B00379192 /* ApiService.swift in Sources */,
 				98E73C272BBBEFBF00379192 /* GuideView.swift in Sources */,
 				985C781E2BC1CBED00C3C7DC /* AuthNavigation.swift in Sources */,
 				98E73BD62BBA979400379192 /* RaceTrackerAppApp.swift in Sources */,
 				985C78182BC16F4F00C3C7DC /* MiniInfoView.swift in Sources */,
-				98E73C0A2BBA9F3700379192 /* BarcodeView.swift in Sources */,
-				98E73C4C2BBFF5DD00379192 /* RegisterViewModel.swift in Sources */,
+				98E73C0A2BBA9F3700379192 /* QRCodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

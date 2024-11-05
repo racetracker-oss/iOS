@@ -14,24 +14,45 @@ struct MapView: View {
     @Namespace var mapScope
     @State private var dropdownMenuTapped = false
     
+    @State private var destination: CLLocationCoordinate2D?
+    
+    @State private var route: MKRoute?
+    @State private var routeDisplaying = false
+    @State private var getDirections = false
+    
     var body: some View {
         ZStack(alignment: .topLeading){
-                Map(scope: mapScope){
-                    UserAnnotation(anchor: .top)
-                    
-                    ForEach(annotations_mock_data) { anno in
-                        Annotation("", coordinate: anno.coordinates) {
-                            CheckPointMapMarker(isCheckpoint: .constant(.checkpoint))
-                        }
-                        .annotationTitles(.hidden)
-                        
+            Map(scope: mapScope){
+                UserAnnotation(anchor: .top)
+                
+                ForEach(annotations_mock_data) { anno in
+                    Annotation("", coordinate: anno.coordinates) {
+                        CheckPointMapMarker(isCheckpoint: .constant(.checkpoint))
+                            .onTapGesture {
+                                Task{
+                                    try await Task.sleep(nanoseconds: 200_000_000)
+                                    try await viewModel.getDirection(endLocation: anno.coordinates)
+                                    self.destination = anno.coordinates
+                                    withAnimation(.snappy) {
+                                        self.routeDisplaying.toggle()
+                                    }
+                                }
+                            }
+                          
                     }
                 }
-                .mapStyle(.imagery(elevation: .realistic))
-            .mapControls({
+                .annotationTitles(.hidden)
+                
+                if let route = viewModel.route{
+                    MapPolyline(route.polyline)
+                        .stroke(.blue, lineWidth: 6)
+                }
+                
+            }
+            .mapStyle(.imagery(elevation: .realistic))
+            .mapControls{
                 MapUserLocationButton()
-
-            })
+            }
             .controlSize(.regular)
             .tint(.primary)
             .alert(isPresented: $viewModel.locationPermissionDenied, content: {
@@ -44,11 +65,9 @@ struct MapView: View {
             })
             
             //MARK: - Dropdown Info
-            MiniInfoView(isTapped: $dropdownMenuTapped)
-            //.padding(.top, 65)
+            MiniInfoView(isTapped: $dropdownMenuTapped, viewModel: viewModel)
                 .padding(.top, 3)
                 .padding(.horizontal,8)
-                //.padding(.trailing, 50)
         }
     }
 }

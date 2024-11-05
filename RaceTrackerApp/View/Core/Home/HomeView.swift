@@ -11,7 +11,7 @@ struct HomeView: View {
    
     var body: some View {
         ScrollView{
-            Text("Hello")
+            Text("HomeView")
                 .font(.largeTitle)
                 .foregroundStyle(.green)
         }

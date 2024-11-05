@@ -9,9 +9,10 @@ import SwiftUI
 
 struct MiniInfoView: View {
     @Binding var isTapped: Bool
+    @StateObject var viewModel: LocationService
     
     var body: some View {
-        VStack{
+        VStack(spacing: 25){
             HStack{
                 Image(systemName: "chevron.right")
                     .rotationEffect(.degrees(isTapped ? 90 : 0))
@@ -28,24 +29,10 @@ struct MiniInfoView: View {
             
             if isTapped{
                 HStack(spacing: 15){
-                    ForEach(0..<3){ _ in
-                        HStack{
-                            Image(systemName: "person.fill")
-                                .imageScale(.large)
-                            
-                            VStack{
-                                Text("10.9")
-                                Text("KM")
-                                    .font(.footnote)
-                            }
-                            .padding()
-                        }
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .foregroundStyle(.bar)
-                                .frame(height: 50)
-                        )
-                    }
+                    MiniInfoSection(imageName: "mappin", value: viewModel.route?.distance ?? 0, unit: "M", colorOne: .primary, colorTwo: .secondary)
+                    MiniInfoSection(imageName: "flame.fill", value: 0, unit: "kCal",colorOne: .orange, colorTwo: .red)
+                    MiniInfoSection(imageName: "gauge.with.dots.needle.67percent", value: 0, unit: "KM/H", colorOne: .black, colorTwo: .blue)
+
                 }
             }
         }
@@ -64,5 +51,37 @@ struct MiniInfoView: View {
 }
 
 #Preview {
-    MiniInfoView(isTapped: .constant(true))
+    MiniInfoView(isTapped: .constant(true), viewModel: LocationService())
+}
+
+struct MiniInfoSection: View {
+    let imageName: String
+    let value: Double
+    let unit: String
+    let colorOne: Color
+    let colorTwo: Color
+    
+    var body: some View {
+        HStack{
+            Image(systemName: imageName)
+                .symbolRenderingMode(.palette)
+                .foregroundStyle(colorOne, colorTwo)
+                .font(.system(size: 20))
+            
+            VStack{
+                Text("\(value,specifier: "%.1f")")
+                    .font(.subheadline)
+                Text(unit)
+                    .font(.footnote)
+                    
+            }
+            .fontWeight(.semibold)
+            .padding(.horizontal)
+        }
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .foregroundStyle(.bar)
+                .frame(width: 100,height: 50)
+        )
+    }
 }
