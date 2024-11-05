@@ -75,7 +75,6 @@ struct CustomProgressView: View {
         }
 
         animateSpinner(with: (rotationTime * 2) + 0.0525) { self.rotationDegreeS2 += fullRotation }
-
         animateSpinner(with: (rotationTime * 2) + 0.225) { self.rotationDegreeS3 += fullRotation }
     }
 }

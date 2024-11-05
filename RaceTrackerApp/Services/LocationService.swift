@@ -7,11 +7,13 @@
 
 import Foundation
 import CoreLocation
-//import MapKit
+import MapKit
  
 class LocationService: NSObject, ObservableObject {
     @Published var locationPermissionDenied = false
     @Published var currentUserLocation: CLLocation?
+    
+    @Published var route: MKRoute?
       
     private let locationManager = CLLocationManager()
     
@@ -43,6 +45,32 @@ class LocationService: NSObject, ObservableObject {
         }
     }
     
+    @MainActor
+    func getDirection(endLocation: CLLocationCoordinate2D?) async throws{
+        guard let startingPoint = currentUserLocation?.coordinate else {
+            print("DEBUG: ERROR - No starting point available")
+            return
+        }
+        
+        guard let destination = endLocation else {
+            print("DEBUG: ERROR - No destination selected")
+            return
+        }
+        
+        let request = MKDirections.Request()
+        request.source = MKMapItem(placemark: MKPlacemark(coordinate: startingPoint))
+        request.transportType = .any
+        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: destination))
+        
+        print("DEBUG: STARTPOINT IS: \(startingPoint)")
+        print("DEBUG: ENDPOINT IS: \(destination)")
+        
+        Task{
+            let directions = MKDirections(request: request)
+            let response = try? await directions.calculate()
+            self.route = response?.routes.first
+        }
+    }
 }
 
 extension LocationService: CLLocationManagerDelegate {

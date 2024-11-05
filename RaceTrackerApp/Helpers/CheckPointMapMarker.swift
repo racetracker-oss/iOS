@@ -15,6 +15,7 @@ enum CustomMapMarkerSection {
 
 struct CheckPointMapMarker: View {
     @Binding var isCheckpoint: CustomMapMarkerSection
+    
     var body: some View {
         VStack(spacing: -10){
             switch isCheckpoint {
@@ -66,7 +67,7 @@ struct CheckPointMapMarker: View {
     }
 }
 
-private extension CheckPointMapMarker{
+private extension CheckPointMapMarker {
     struct Triangle: Shape {
         func path(in rect: CGRect) -> Path {
             var path = Path()

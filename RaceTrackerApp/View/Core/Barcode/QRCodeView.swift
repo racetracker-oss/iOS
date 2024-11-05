@@ -8,7 +8,7 @@
 import SwiftUI
 import VisionKit
 
-struct BarcodeView: View {
+struct QRCodeView: View {
     @State var isShowingScanner = true
     @State private var scannedText = ""
     
@@ -37,7 +37,7 @@ struct BarcodeView: View {
 
 
 #Preview {
-    BarcodeView()
+    QRCodeView()
 }
 
 struct DataScannerRepresentable: UIViewControllerRepresentable {

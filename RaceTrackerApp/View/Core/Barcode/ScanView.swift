@@ -8,7 +8,7 @@
 import SwiftUI
 import CodeScanner
 
-struct CustomBarode: View {
+struct ScanView: View {
     @State private var isResult: String = ""
     @State private var isShowingScanner = false
     
@@ -33,11 +33,6 @@ struct CustomBarode: View {
                     }
                 }
             })
-//            .padding()
-//            .background(
-//                RoundedRectangle(cornerRadius: 12)
-//            )
-//            .padding()
         }
     }
     private func handleScan(result: Result<ScanResult, ScanError>) {
@@ -54,5 +49,5 @@ struct CustomBarode: View {
 }
 
 #Preview {
-    CustomBarode()
+    ScanView()
 }
